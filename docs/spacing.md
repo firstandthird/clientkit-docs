@@ -1,19 +1,49 @@
 # Spacing
 
-The spacing defaults below allow for the various combinations listed below. Essentially every possible combination of `margin` and `padding` can be combined with `top`, `right`, `bottom` or `left` and the defaults to acheive anything. There are special keywords (`xaxis` and `yaxis`) you can use, in lieu of individual directional attributes when you want spacing options on two different sizes.
+The spacing defaults below allow for the various combinations listed below.
+Essentially every possible combination of `margin` and `padding` can be
+combined with `top`, `right`, `bottom` or `left` and the defaults to achieve
+anything. There are special keywords (`xaxis` and `yaxis`) you can use, in
+lieu of individual directional attributes when you want spacing options on two
+different sizes.
 
-#### Defaults
+## Variables
 
-```yaml
-  none: 0
-  xl: 80px
-  lg: 50px
-  md: 30px
-  sm: 20px
-  xs: 10px
+* `var(--spacing-none)`: **0**
+* `var(--spacing-xs)`: **10px**
+* `var(--spacing-sm)`: **20px**
+* `var(--spacing-md)`: **30px**
+* `var(--spacing-lg)`: **50px**
+* `var(--spacing-xl)`: **80px**
+
+## Mixins
+
+### spacing $prop, $position, $size
+
+#### Parameters
+
+* `$prop` (optional) - margin | padding; defaults to both; the CSS property you'd like to use
+* `$position` (optional) - top | right | bottom | left | xaxis | yaxis; defaults to all; the position from the list
+* `$size` (option) - Object; defaults to the list in the global configuration;
+
+#### Usage
+
+```postcss
+.spacing-xl {
+  @mixin spacing margin, bottom, xl;
+}
 ```
 
-#### Example
+#### Output
+
+```css
+.spacing-xl {
+  margin-bottom: 80px;
+}
+```
+
+## Helpers
+
 ```css
 .margin-none { margin: 0; }
 .margin-xl { margin: 80px; }

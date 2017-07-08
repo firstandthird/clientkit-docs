@@ -1,6 +1,32 @@
 # Tables
 
-## Basic
+## Variables
+
+* `var(--table-cell-padding)`: **10px**
+* `var(--table-sm-cell-padding)`: **5px**
+* `var(--table-bg)`: **transparent**
+* `var(--table-bg-accent)`: **#f9f9f9**
+* `var(--table-bg-hover)`: **#f5f5f5**
+* `var(--table-bg-active)`: **#f5f5f5**
+* `var(--table-border-width)`: **1px**
+* `var(--table-border-color)`: **#eceeef**
+
+## Mixins
+
+None
+
+## Helpers
+
+```scss
+.table
+.table-sm
+.table-bordered
+.table-striped
+.table-hover
+.table-responsive
+```
+
+## Example
 
 ```html
 <table class="table">
@@ -21,7 +47,7 @@
 </table>
 ```
 
-## Condensed with half padding
+### Condensed with half padding
 
 ```html
 <table class="table table-sm">
@@ -42,7 +68,7 @@
 </table>
 ```
 
-## Bordered version
+### Bordered version
 
 Add borders all around the table and between all the columns.
 
@@ -65,7 +91,7 @@ Add borders all around the table and between all the columns.
 </table>
 ```
 
-## Zebra-striping
+### Zebra-striping
 
 Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
@@ -88,7 +114,7 @@ Default zebra-stripe styles (alternating gray and transparent backgrounds)
 </table>
 ```
 
-## Hover effect
+### Hover effect
 
 Placed here since it has to come after the potential zebra striping
 
@@ -111,7 +137,7 @@ Placed here since it has to come after the potential zebra striping
 </table>
 ```
 
-## Responsive tables
+### Responsive tables
 
 Wrap your tables in `.table-responsive` and we'll make them mobile friendly
 by enabling horizontal scrolling. Only applies <768px. Everything above that

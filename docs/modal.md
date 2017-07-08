@@ -1,5 +1,21 @@
 # Modal
 
+## Variables
+
+None
+
+## Mixins
+
+None
+
+## Helpers
+
+```postcss
+.modal
+```
+
+## Example
+
 ```html
 <a href="#modal-example" class="margin-top-sm button">Show Modal</a>
 <div id="modal-example" class="modal">

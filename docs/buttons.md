@@ -1,61 +1,125 @@
 # Buttons
 
+A set of buttons with sizes, colors, and states.
+
 ## Variables
 
-* ease-out: `cubic-bezier(0.000, 0.000, 0.580, 1.000)`
-* button-primary-bg: `{{stylesheets.color.accent1}}`
-* button-primary-color: `#fff`
-* button-radius-default: `3px`
+* `var(--button-radius-default)`: **3px** - default button radius for all buttons
+* `var(--color-button-primary-bg)`: **{{stylesheets.color.accent1}}** - the default background and border color for primary buttons
+* `var(--color-button-primary-color)`: **#fff** - the default text color for primary buttons
+* `var(--color-button-secondary-bg)`: **{{stylesheets.color.accent2}}** - the background color for all secondary buttons
+* `var(--color-button-secondary-color)`: **{{stylesheets.color.white}}** - the text color for all secondary buttons
 
 ## Mixins
 
-### @mixin button backgroundColor, fontColor, borderColor, borderRadius, hoverBackground, hoverColor;
+### button $backgroundColor, $fontColor, $borderColor, $borderRadius, $hoverBackground, $hoverColor;
 
-Outputs:
+#### Parameters
 
-```scss
-display: inline-block;
-border: 2px solid $border;
-border-radius: $borderRadius;
-padding: 12px 14px;
-background-color: $background;
-color: $color;
-font-size: 14px;
-line-height: 1;
-text-align: center;
-vertical-align: middle;
-cursor: pointer;
-transition: color 250ms var(--easing-out), background-color 250ms var(--easing-out);
+* `$backgroundColor` **(required)** - Color
+* `$fontColor` **(required)** - Color
+* `$borderColor` **(required)** - Color
+* `$borderRadius` **(required)** - CSS Unit
+* `$hoverBackground` **(required)** - Color
+* `$hoverColor` **(required)** - Color
 
-&:hover,
-&:active,
-&.active,
-&:focus {
-	background-color: $hoverBackground;
-	color: $hoverColor;
-}
+#### Usage
 
-&:disabled {
-	opacity: .7;
-	cursor: not-allowed;
-
-&:hover,
-&:active,
-&.active,
-&:focus {
-	background-color: $background;
-	color: $color;
+```postcss
+.btn {
+  @mixin button blue, white, blue, 3px, white, blue;
 }
 ```
 
-### @mixin button-size paddingY, paddingX, fontSize, borderRadius
-
-Outputs:
+#### Output
 
 ```scss
-border-radius: $borderRadius;
-padding: $paddingY $paddingX;
-font-size: $fontSize;
+.btn {
+  display: inline-block;
+  border: 2px solid blue;
+  border-radius: 3px;
+  padding: 12px 14px;
+  background-color: blue;
+  color: white;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: color 250ms var(--easing-out), background-color 250ms var(--easing-out);
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus {
+    background-color: white;
+    color: blue;
+  }
+
+  &:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+  }
+}
+```
+
+### button-size $paddingY, $paddingX, $fontSize, $borderRadius
+
+#### Parameters
+
+* `$paddingY` **(required)** - CSS Unit; value for the y-axis, top and bottom
+* `$paddingX` **(required)** - CSS Unit; value for the x-axis, left and right
+* `$fontSize` **(required)** - CSS Unit
+* `$borderRadius` **(required)** - CSS Unit
+
+#### Usage
+
+```postcss
+.btn-lg {
+  @mixin button-size 20px, 25px, 16px, 5px;
+}
+```
+
+#### Output
+
+```scss
+.btn-lg {
+  border-radius: 5px;
+  padding: 20px 25px;
+  font-size: 16px;
+}
+```
+
+### button-outline $color
+
+#### Parameters
+
+* `$color` **(required)** - Color; border and text colors
+
+#### Usage
+
+```postcss
+.btn-outline {
+  @mixin button-outline blue;
+}
+```
+
+#### Output
+
+```scss
+.btn-outline {
+  border-color: blue;
+  background-color: transparent;
+  color: blue;
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus {
+    background-color: blue;
+    color: #fff;
+  }
+}
 ```
 
 ## Helpers

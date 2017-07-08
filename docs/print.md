@@ -6,7 +6,27 @@ attributes printed alongside. Other than a few more elements that get reset,
 there are a few helpers added to allow you to chose which elements are printed
 and which are not.
 
-#### Example
+## Variables
+
+None
+
+## Mixins
+
+None
+
+## Helpers
+
+```postcss
+.show-print
+.show-print-block
+.show-print-inline
+.show-print-inline-block
+.hide-print
+.row-print-stacked
+```
+
+## Example
+
 ```html
 <p class="show-print-block">print only as block level, won't show on any other media type</p>
 <p class="show-print-inline">print only as inline level, won't show on any other media type</p>
