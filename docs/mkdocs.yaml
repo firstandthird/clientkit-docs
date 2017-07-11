@@ -1,0 +1,36 @@
+site_name: Clientkit
+site_url: http://docs.clientkit.io
+repo_url: https://github.com/firstandthird/clientkit-docs.git
+site_description:
+site_author:
+copyright: 2017
+remote_branch: master
+pages:
+    - Home: 'getting-started.md'
+    - Layout:
+      - Grid: 'grid.md'
+      - Clearfix: 'clearfix.md'
+    - Content:
+      - Colors: 'colors.md'
+      - Typography: 'typography.md'
+      - Icons: 'icons.md'
+      - Images: 'images.md'
+      - Tables: 'tables.md'
+      - Print: 'print.md'
+    - Components:
+      - Buttons: 'buttons.md'
+      - Carousel: 'carousel.md'
+      - Dropdown: 'dropdown.md'
+      - Forms: 'forms.md'
+      - 'Menu slide': 'menu-slide.md'
+      - Messages: 'messages.md'
+      - Modal: 'modal.md'
+      - Tabs: 'tabs.md'
+      - Tooltip: 'tooltip.md'
+      - UGC: 'ugc.md'
+    - Utilities:
+      - Utilities: 'utilities.md'
+      - Borders: 'borders.md'
+      - Spacing: 'spacing.md'
+      - Transitions: 'transitions.md'
+      - Triangle: 'triangle.md'
