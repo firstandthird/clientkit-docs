@@ -1,10 +1,11 @@
+copyright: 2017
 site_name: Clientkit
 site_url: http://docs.clientkit.io
-repo_url: https://github.com/firstandthird/clientkit-docs.git
 site_description:
-site_author:
-copyright: 2017
+site_author: First+Third
 remote_branch: master
+repo_url: https://github.com/firstandthird/clientkit-docs.git
+theme: 'material'
 pages:
     - Home: 'getting-started.md'
     - Layout:
