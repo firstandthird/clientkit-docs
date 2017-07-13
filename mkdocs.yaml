@@ -8,6 +8,8 @@ repo_url: https://github.com/firstandthird/clientkit-docs.git
 theme: 'material'
 pages:
     - Home: 'getting-started.md'
+    - Configuration:
+      - Breakpoints: 'breakpoints.md'
     - Layout:
       - Grid: 'grid.md'
       - Clearfix: 'clearfix.md'
